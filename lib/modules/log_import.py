@@ -3,7 +3,7 @@ from subprocess import run
 
 def log_import():
 
-    cmd1 = 'rm -rf ' + log_path + '*.log'
+    cmd1 = 'rm ' + log_path + '*.log'
     splited_cmd1 = cmd1.split()
     run(splited_cmd1)
 
