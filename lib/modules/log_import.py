@@ -1,5 +1,5 @@
 from lib.settings import log_path
-from subprocess import run
+from subprocess import run, Popen
 import os, re
 
 def log_import():
@@ -17,12 +17,12 @@ def log_import():
             continue
     try:
         cmd2 = 'sudo cp /var/log/nginx/*.log ' + log_path
-        #splited_cmd2 = cmd2.split()
-        #run(splited_cmd2)
+        splited_cmd2 = cmd2.split()
+        Popen(splited_cmd2)
 
-        cmd3 = 'sudo chmod 777 ' + log_path + '*.log' + ' biggie'
-        #splited_cmd3 = cmd3.split()
-        #run(splited_cmd3)
+        cmd3 = 'sudo chown biggie ' + log_path + '*.log'
+        splited_cmd3 = cmd3.split()
+        run(splited_cmd3)
         print('cmd2: ' + cmd2)
         print('cmd3: ' + cmd3)
         print('Nginx logs have been updated!')
