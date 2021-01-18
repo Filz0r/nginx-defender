@@ -16,6 +16,10 @@ def log_import():
             print(cmd3)
             splited_cmd3 = cmd3.split()
             run(splited_cmd3)
+            cmd2 = 'chmod 777 ' + log_path + filename
+            print(cmd2)
+            splited_cmd2 = cmd2.split()
+            run(splited_cmd2)
             continue
         else:
             print('did not run')
