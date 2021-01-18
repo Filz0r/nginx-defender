@@ -1,6 +1,8 @@
 from lib.modules.log_parser import log_parser
 from lib.modules.ip_filter import log_finder
 from lib.modules.geo_ip import geo_ip
+from lib.modules.ip_blocker import ip_blocker
+from lib.modules.log_import import log_import
 
 def menu():
     print('''
@@ -8,9 +10,11 @@ def menu():
 ##                                                        ##
 ##  What do you want to do?                               ##
 ##                                                        ##
-##  1-> look for injection requests in your nginx logs    ##
-##  2-> filter your results                               ##
+##  1 -> look for injection requests in your nginx logs   ##
+##  2 -> filter your results                              ##
 ##  3 -> Find out GeoIP location of these requests        ##
+##  4 -> Use ufw to ban found IPs from connecting         ##
+##  5 -> Grab logs from the folder                        ##
 ##                                                        ##
 ############################################################''')
     #try:
@@ -38,6 +42,12 @@ INPUT: ''')
     elif response == 3:
         response = 0
         geo_ip()
+    elif response == 4:
+        response = 0
+        ip_blocker()
+    elif response == 5:
+        response = 0
+        log_import()
     else:
         print('error invalid choice')
         return menu()
