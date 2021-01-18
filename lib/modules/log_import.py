@@ -16,7 +16,7 @@ def log_import():
         else:
             continue
     try:
-        cmd2 = 'sudo cp -r /var/log/nginx/ ' + log_path
+        cmd2 = 'sudo cp -a /var/log/nginx/. ' + log_path
         splited_cmd2 = cmd2.split()
         Popen(splited_cmd2)
 
