@@ -7,7 +7,7 @@ def log_import():
     splited_cmd1 = cmd1.split()
     run(splited_cmd1)
 
-    cmd2 = 'sudo cp /var/log/nginx/*.log ' + log_path
+    cmd2 = 'sudo cp -r /var/log/nginx/' + log_path
     splited_cmd2 = cmd2.split()
     run(splited_cmd2)
 
