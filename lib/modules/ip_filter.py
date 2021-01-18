@@ -17,7 +17,7 @@ def ip_filter(filename):
     for line in hand:
         line = line.rstrip()
         stuff = re.findall(pattern, line)
-        ip = str(stuff)[2:-3]
+        ip = str(stuff)[2:-2]
         if ip not in ip_dic:
             ip_dic[ip] = 1
         else:
