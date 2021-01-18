@@ -20,7 +20,7 @@ def log_import():
         splited_cmd2 = cmd2.split()
         Popen(splited_cmd2)
 
-        cmd3 = 'sudo chown biggie ' + log_path + '*'
+        cmd3 = 'sudo chown biggie ' + log_path
         splited_cmd3 = cmd3.split()
         run(splited_cmd3)
         print('cmd2: ' + cmd2)
