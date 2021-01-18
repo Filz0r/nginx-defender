@@ -16,5 +16,8 @@ def log_import():
             print(cmd3)
             Popen(splited_cmd3)
             continue
+        else:
+            print('did not run')
+            continue
     
 
