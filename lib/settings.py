@@ -26,6 +26,8 @@ username = None
 if username == None:
     (username, hostname, publicIP) = config_check()
 
+user = username
+
 # Again here global constants are declared, however these are the constants that
 # the scripts require to read, filter and produce results, the first block checks if
 # the directories exist, the second, creates them if they do not exist
