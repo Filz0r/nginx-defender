@@ -1,5 +1,5 @@
 from lib.settings import results_path
-import json, operator
+import json, operator, subprocess
 
 def result():
     path = results_path + 'geoip-sorted.json'
@@ -72,3 +72,8 @@ def result():
 
     hand.close()
     print('Your results are writen in the result.log file that is stored in the results directory')
+    cmd = 'nano ' + result
+    cmd_split = cmd.split()
+    subprocess.run(cmd_split)
+    from lib.menu import menu
+    menu()

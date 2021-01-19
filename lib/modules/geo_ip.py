@@ -51,3 +51,5 @@ def geo_ip():
         json.dump(result, output, sort_keys=True, indent=4)
     print('I\'ve made a total of ' + str(ct) + ' requests to https://ipinfo.io/ and wrote the raw json output into geo-ip.json in the results folder')
     print('Then I added how many requests, each IP made to you and put all the results into geo-ip-sorted.json in the results folder\nThis is the file that the final result.log will use to give conclusions')
+    from lib.menu import menu
+    menu()

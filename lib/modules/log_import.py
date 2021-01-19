@@ -36,4 +36,7 @@ def log_import():
             print('did not run')
             continue
     
+    from lib.menu import menu
+    menu()
+    
 

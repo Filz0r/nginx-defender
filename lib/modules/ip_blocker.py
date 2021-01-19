@@ -18,3 +18,5 @@ def ip_blocker():
         splited_cmd= cmd.split()
         subprocess.run(splited_cmd)
         print('Done!')
+    from lib.menu import menu
+    menu()

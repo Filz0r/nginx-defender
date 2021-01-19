@@ -43,3 +43,5 @@ def log_parser():
 
     print('done, found ' + str(ct) + ' results')
     print('You can find the result of this script in the results folder with the filename: ' + str(parsed_log_file))
+    from lib.menu import menu
+    menu()
