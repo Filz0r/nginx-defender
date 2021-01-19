@@ -29,6 +29,7 @@ def result():
         y = 0
         z = 0
         o = 0
+        p = 0
         for info in data:
             if 'Europe' in info['timezone']: n += 1
             elif 'Asia' in info['timezone']: m += 1
@@ -36,6 +37,7 @@ def result():
             elif 'Africa' in info['timezone']: y += 1
             elif 'Pacific' in info['timezone']: z += 1
             elif 'Indian' in info['timezone']: o += 1
+            elif 'Australia' in info['timezone']: p += 1
             else:
                 print('your error is:')
                 print(info)
@@ -53,6 +55,7 @@ def result():
         hand.write('Africa requests: ' + str(y) + '\n')
         hand.write('Pacific requests: ' + str(z) + '\n')
         hand.write('Indian requests: ' + str(o) + '\n')
+        hand.write('Australia requests: ' + str(p) + '\n')
         hand.write('Total requests found: ' + str(total) + '\n')
         hand.write('--------------------------\n')
 
