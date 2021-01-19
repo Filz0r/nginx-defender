@@ -17,7 +17,7 @@ def log_parser():
     for file in os.listdir(log_path):
         filename = os.fsdecode(file)
         # If the filename ends with .log...
-        if filename.endswith(".log"):
+        if '.log' in filename:
             # We open it to read it
             hand = open(log_path + filename, 'rt')
             # Then for each line in this file that has the pattern I declared earlier
