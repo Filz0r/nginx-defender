@@ -68,7 +68,7 @@ def result():
                 hand.write('The Hostname of the server: ' + str(info['hostname']) + '\n')
             else:
                 hand.write('The Hostname of the server: No hostname found' + '\n')
-            hand.write('--------------------------')
+            hand.write('--------------------------\n')
 
     hand.close()
     print('Your results are writen in the result.log file that is stored in the results directory')
