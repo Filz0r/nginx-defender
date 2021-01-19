@@ -31,9 +31,6 @@ def log_import():
             cmd2 = 'sudo chown www-data:' + username + log_path + filename
             splited_cmd2 = cmd2.split()
             run(splited_cmd2)
-            cmd3 = 'chmod 700 ' + log_path + filename
-            splited_cmd3 = cmd3.split()
-            run(splited_cmd3)
             continue
         else:
             print('did not run')
