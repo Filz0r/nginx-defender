@@ -2,4 +2,5 @@
 *.pyc
 *.json
 __pycache__
+nginx-defender.conf
 test*.py
