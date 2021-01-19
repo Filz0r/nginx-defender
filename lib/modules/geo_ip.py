@@ -33,6 +33,7 @@ def geo_ip():
     # writes the response to a json file
     with open(result_path, 'w+') as outfile:
         json.dump(info, outfile, sort_keys=True, indent=4)
+        outfile.close()
     # parses the json file just created and adds the ammount of requests
     # each IP made trying to inject a payload
     with open(result_path, 'rt') as json_file:
@@ -49,6 +50,9 @@ def geo_ip():
     # writes the combined result to a new file
     with open(path2, 'w+') as output:
         json.dump(result, output, sort_keys=True, indent=4)
+        output.close()
+    hand.close()
+    hand1.close()
     print('I\'ve made a total of ' + str(ct) + ' requests to https://ipinfo.io/ and wrote the raw json output into geo-ip.json in the results folder')
     print('Then I added how many requests, each IP made to you and put all the results into geo-ip-sorted.json in the results folder\nThis is the file that the final result.log will use to give conclusions')
     from lib.menu import menu

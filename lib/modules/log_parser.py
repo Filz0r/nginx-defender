@@ -33,7 +33,8 @@ def log_parser():
                 # if the line I just found has nothing, keep on going python
                 if len(stuff) != 1 :
                     continue
-            #continue until there are no more files ending with .log
+            hand.close()
+            #continue until there are no more files with .log in the name
             continue
         else:
             # If you get this message, you did not provide any logs for the script to look for

@@ -21,11 +21,11 @@ def menu():
 ##  What do you want to do?                               ##
 ##                                                        ##
 ##  0 -> EXIT                                             ##
-##  1 -> look for injection requests in your nginx logs   ##
-##  2 -> filter your results                              ##
-##  3 -> Find out GeoIP location of these requests        ##
-##  4 -> Use ufw to ban found IPs from connecting         ##
-##  5 -> Grab logs from the folder                        ##
+##  1 -> Grab logs from the folder                        ##
+##  2 -> look for injection requests in your nginx logs   ##
+##  3 -> filter your results                              ##
+##  4 -> Find out GeoIP location of these requests        ##
+##  5 -> Use ufw to ban found IPs from connecting         ##
 ##  6 -> Create a final result.log file with all of your  ##
 ##       data parsed and scraped!                         ##
 ##                                                        ##
@@ -48,19 +48,19 @@ INPUT: ''')
 ############################################################''')
         elif response == 1:
             response = 0
-            log_parser()
+            log_import()
         elif response == 2:
             response = 0
-            log_finder()
+            log_parser()
         elif response == 3:
             response = 0
-            geo_ip()
+            log_finder()
         elif response == 4:
             response = 0
-            ip_blocker()
+            geo_ip()
         elif response == 5:
             response = 0
-            log_import()
+            ip_blocker()
         elif response == 6:
             response = 0
             result()

@@ -65,5 +65,6 @@ def machine_startup():
     app_setting['publicIP'] = publicIP
     with open(end_path, 'w+') as conf:
         config.write(conf)
+        conf.close()
     return hostname, username, publicIP
 

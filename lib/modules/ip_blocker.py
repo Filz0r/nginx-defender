@@ -17,6 +17,7 @@ def ip_blocker():
         cmd = 'sudo ufw insert 1 deny from ' + str(ip) + ' to any'
         splited_cmd= cmd.split()
         subprocess.run(splited_cmd)
-        print('Done!')
+    hand.close()    
+    print('Done!')
     from lib.menu import menu
     menu()

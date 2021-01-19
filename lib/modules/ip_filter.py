@@ -30,7 +30,9 @@ def ip_filter(filename):
         filtered_log.write((str(key) + ' has made ' + str(ip_dic[key]) + ' requests to your server' + '\n'))
         ip_list.write(key + '\n')
         ct = ct + 1
-
+    hand.close()
+    filtered_log.close()
+    ip_list.close()
     print('done, I found a total of ' + str(ct) + ' different IPs making these requests')
     print('You can check out the results of this script in ' + results_path)
     from lib.menu import menu

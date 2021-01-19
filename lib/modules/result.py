@@ -51,8 +51,8 @@ def result():
         hand.write('Asia requests: ' + str(m) + '\n')
         hand.write('America requests: ' + str(x) + '\n')
         hand.write('Africa requests: ' + str(y) + '\n')
-        hand.write('Pacific requests: ' + str(y) + '\n')
-        hand.write('Indian requests: ' + str(y) + '\n')
+        hand.write('Pacific requests: ' + str(z) + '\n')
+        hand.write('Indian requests: ' + str(o) + '\n')
         hand.write('Total requests found: ' + str(total) + '\n')
         hand.write('--------------------------\n')
 
