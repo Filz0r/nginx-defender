@@ -18,7 +18,7 @@ def config_check():
         config.read(conf_path)
         app_setting = config['SETTINGS']
         hostname = app_setting['hostname']
-        username = app_setting['name']
+        username = app_setting['user']
         publicIP = app_setting['publicIP']
         return hostname, username, publicIP
 

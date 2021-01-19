@@ -28,7 +28,7 @@ def log_import():
     for file in os.listdir(directory):
         filename = os.fsdecode(file)
         if filename.endswith(".log"):
-            cmd2 = 'sudo chown ' + username + log_path + filename
+            cmd2 = 'sudo chown www-data:' + username + log_path + filename
             splited_cmd2 = cmd2.split()
             run(splited_cmd2)
             cmd3 = 'chmod 700 ' + log_path + filename
