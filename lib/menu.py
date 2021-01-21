@@ -30,44 +30,44 @@ def menu():
 ##       data parsed and scraped!                         ##
 ##                                                        ##
 ############################################################''')
-    try:
-        question = input('''
+    #try:
+    question = input('''
 ############################################################
 ##                                                        ##
 ##  What do you want to do? Chose a number!               ##
 ##                                                        ##
 ############################################################
 INPUT: ''')
-        response = int(question)
-        if response == 0:
-            print('''
+    response = int(question)
+    if response == 0:
+        print('''
 ############################################################
 ##                                                        ##
 ##                      GOOD BYE!                         ##
 ##                                                        ##
 ############################################################''')
-        elif response == 1:
-            response = 0
-            log_import()
-        elif response == 2:
-            response = 0
-            log_parser()
-        elif response == 3:
-            response = 0
-            log_finder()
-        elif response == 4:
-            response = 0
-            geo_ip()
-        elif response == 5:
-            response = 0
-            ip_blocker()
-        elif response == 6:
-            response = 0
-            result()
-        else:
-            print('error invalid choice')
-            return menu()
-
-    except:
-        print('You need to chose a number')
+    elif response == 1:
+        response = 0
+        log_import()
+    elif response == 2:
+        response = 0
+        log_parser()
+    elif response == 3:
+        response = 0
+        log_finder()
+    elif response == 4:
+        response = 0
+        geo_ip()
+    elif response == 5:
+        response = 0
+        ip_blocker()
+    elif response == 6:
+        response = 0
+        result()
+    else:
+        print('error invalid choice')
         return menu()
+
+    #except:
+    #    print('You need to chose a number')
+    #    return menu()
