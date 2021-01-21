@@ -14,7 +14,7 @@ def ip_blocker():
     hand = open(path, 'rt')
 
     for ip in hand:
-        cmd = 'sudo ufw insert 1 reject from ' + str(ip) + ' to any'
+        cmd = 'sudo ufw insert 1 deny from ' + str(ip) + ' to any'
         splited_cmd= cmd.split()
         subprocess.run(splited_cmd)
     hand.close()    
