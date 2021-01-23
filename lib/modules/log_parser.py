@@ -37,9 +37,8 @@ def log_parser():
             #continue until there are no more files with .log in the name
             continue
         else:
-            # If you get this message, you did not provide any logs for the script to look for
+            # If you don't have any files with .log in this directory, well the script will skip them
             # and you will get 0 results found and an empty output file, horrray!!
-            print('It seems like you don\'t have any logs that this script can access\nPlease run the log import script then run this again!')
             continue
 
     print('done, found ' + str(ct) + ' results')
